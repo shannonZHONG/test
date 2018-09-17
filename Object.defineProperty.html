@@ -1,0 +1,78 @@
+<html>
+
+<body>
+    <div>Object.defineProperty </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        var person = {};
+        Object.defineProperty(person, "name", {
+            writable: false,
+            value: "test"
+        });
+
+        var person1 = {};
+        Object.defineProperty(person1, "name", {
+            configurable: false,
+            value: "test"
+        });
+
+
+
+        var testbook = {
+            _year: 2004,
+            edition: 1
+        };
+
+
+        Object.defineProperty(testbook, "year", {
+            get: function() {
+                return this._year;
+            },
+            set: function(newValue) {
+                if (newValue > 2004) {
+                    this._year = newValue;
+                    this.edition += newValue - 2004;
+                }
+
+            }
+
+        })
+
+
+
+
+
+        var book = {};
+
+        Object.defineProperties(book, {
+            _year: {
+                writable: true,
+                value: 2004
+            },
+            edition: {
+                writable: true,
+                value: 1
+            },
+
+            year: {
+                get: function() {
+                    return this._year;
+                },
+                set: function(newValue) {
+                    if (newValue > 2004) {
+                        this._year = newValue;
+                        this.edition += newValue - 2004;
+                    }
+                }
+            }
+        });
+        
+        
+
+    </script>
+</body>
+
+</html>
