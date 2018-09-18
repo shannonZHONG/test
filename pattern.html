@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <div>Factory Pattern Vs constructor Pattern </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function createPerson(name, age, job) {
+            var o = new Object();
+            o.name = name;
+            o.age = age;
+            o.job = job;
+            o.sayName = function() {
+                alert(this.name);
+            };
+            return o;
+        }
+
+        function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayName = function() {
+                alert(this.name);
+            };
+        }
+
+    </script>
+</body>
+
+</html>
