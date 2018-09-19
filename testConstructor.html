@@ -37,7 +37,9 @@
                 console.log(this.name);
             }
         }
-        
+        var person1 = new Person();
+        console.log(person1.constructor === Person);
+      
 
         function PersonTest() {}
         PersonTest.prototype.name = "test";
