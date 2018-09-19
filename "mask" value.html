@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <div>"mask" value </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function Person() {}
+        Person.prototype.name = "test";
+        Person.prototype.age = 18;
+        Person.prototype.job = "test";
+        Person.prototype.sayName = function() {
+            alert(this.name);
+
+        }
+        var person1 = new Person();
+        person1.name = "changed";
+        console.log(person1.name);
+
+        var person2 = new Person();
+        console.log(person2.name);
+
+   
+
+    </script>
+</body>
+
+</html>
