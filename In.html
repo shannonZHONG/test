@@ -1,0 +1,30 @@
+<html>
+
+<body>
+    <div>in </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    
+    <script>
+        function Person() {}
+        Person.prototype.name = "test";
+        Person.prototype.age = 18;
+        Person.prototype.job = "test";
+        Person.prototype.sayName = function() {
+            alert(this.name);
+        }
+        
+        var person1 = new Person();
+        person1.sayName();
+        var person2 = new Person();
+        person2.sayName();
+   
+        console.log(person1.hasOwnProperty("name"));
+        console.log("name" in person1);
+        
+    </script>
+</body>
+
+</html>
