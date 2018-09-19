@@ -1,0 +1,32 @@
+<html>
+
+<body>
+    <div>isPrototype Vs Object.getPrototype</div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function Person() {}
+        Person.prototype.name = "test";
+        Person.prototype.age = 18;
+        Person.prototype.job = "test";
+        Person.prototype.sayName = function() {
+            alert(this.name);
+
+        }
+        var person1 = new Person();
+        person1.sayName();
+
+        var person2 = new Person();
+        person2.sayName();
+
+    console.log(Person.prototype.isPrototypeOf(person1));
+    console.log(Person.prototype.isPrototypeOf(person2));
+    console.log(Object.getPrototypeOf(person1) === Person.prototype);
+    console.log(Object.getPrototypeOf(person1).name);
+
+    </script>
+</body>
+
+</html>
