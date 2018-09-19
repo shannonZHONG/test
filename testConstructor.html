@@ -9,15 +9,29 @@
     <script>
         function Person() {}
 
-        Person.prototype.name = "test";
-        Person.prototype.age = 18;
-        Person.prototype.job = " test system ";
-        Person.prototype.sayName = function() {
-            alert(this.name);
-        };
+        Person.prototype = {
+            name: "test",
+            age: 18,
+            job: " test system ",
+            sayName: function() {
+                console.log(this.name);
+            }
+        }
 
-        var personTest = new Person();
-        console.log(personTest.constructor === Person)
+        var person = new Person();
+        console.log(person.constructor === Person);
+
+
+        function PersonTest() {}
+        PersonTest.prototype.name = "test";
+        PersonTest.prototype.age = 18;
+        PersonTest.prototype.job = "test";
+        PersonTest.prototype.sayName = function() {
+            alert(this.name);
+        }
+
+        var test = new PersonTest()
+        console.log(test.constructor === PersonTest)
 
     </script>
 </body>
