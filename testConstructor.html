@@ -1,14 +1,16 @@
 <html>
 
 <body>
-    <div>Factory Pattern Vs constructor Pattern </div>
+  <div> test Constructor </div>
     <ul>
         <li>step by step</li>
         <li>day day up</li>
     </ul>
     <script>
         function Person() {}
-
+        // 将Person。prototype 设置为等于一个对象字面量形式创建的新对象 最终结果就不一样了
+        // 没创建一个函数，就会同时创建它的prototype 对象 这个对象 也会自动获得 constructor 属性 
+        // 这里  使得 prototype 变得好看以后 本质上 person 的 prototype 就已经被重新写过了。 
         Person.prototype = {
             name: "test",
             age: 18,
@@ -19,8 +21,23 @@
         }
 
         var person = new Person();
-        console.log(person.constructor === Person);
-
+        console.log(person.constructor === Person);// false 
+        // 但是 如果使用instanceOf 的话 还是会返回true 
+        console.log(friend instanceof Object);// true
+        console.log(friend instanceof Person);//true  
+        // 如果constructor 的值真的会被使用到 
+        // 那么：就需要重新设置  constructor的值 
+        function Person() {}
+         Person.prototype = {
+            constructor：Person，
+            name: "test",
+            age: 18,
+            job: " test system ",
+            sayName: function() {
+                console.log(this.name);
+            }
+        }
+        
 
         function PersonTest() {}
         PersonTest.prototype.name = "test";
@@ -31,7 +48,7 @@
         }
 
         var test = new PersonTest()
-        console.log(test.constructor === PersonTest)
+        console.log(test.constructor === PersonTest) // true 
 
     </script>
 </body>
