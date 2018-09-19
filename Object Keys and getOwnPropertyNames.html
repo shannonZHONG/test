@@ -1,0 +1,34 @@
+<html>
+
+<body>
+    <div>read object properties by Object Keys and getOwnPropertyNames
+    </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function Person() {}
+        Person.prototype.name = "test";
+        Person.prototype.age = 18;
+        Person.prototype.job = "test";
+        Person.prototype.sayName = function() {
+            alert(this.name);
+
+        }
+        var keys = Object.keys(Person.prototype);
+        console.log(keys);
+
+        var p1 = new Person();
+        p1.name = "changed";
+        p1.age = "changed changed";
+        var p1Keys = Object.keys(p1);
+        console.log(p1);
+
+        var keyTest = Object.getOwnPropertyNames(Person.prototype);
+        console.log(keyTest)
+
+    </script>
+</body>
+
+</html>
