@@ -41,6 +41,21 @@
         var person1 = new Person();
         console.log(person1.constructor === Person);
       
+      
+      // 第二种方式 如果当游览器里面 默认constructor 是不可更改时  
+       function Person() {}
+        Person.prototype = {
+            name: "test"
+        };
+        var person = new Person();
+       Object.defineProperty(Person.prototype,
+            "constructor", {
+                enumerable: false,
+                value: Person
+            })
+        console.log(person.constructor === Person);
+      
+      
 
         function PersonTest() {}
         PersonTest.prototype.name = "test";
