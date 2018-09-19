@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <div>Factory Pattern Vs constructor Pattern </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function Person() {}
+
+        Person.prototype.name = "test";
+        Person.prototype.age = 18;
+        Person.prototype.job = " test system ";
+        Person.prototype.sayName = function() {
+            alert(this.name);
+        };
+
+        var personTest = new Person();
+        console.log(personTest.constructor === Person)
+
+    </script>
+</body>
+
+</html>
