@@ -27,16 +27,17 @@
         console.log(friend instanceof Person);//true  
         // 如果constructor 的值真的会被使用到 
         // 那么：就需要重新设置  constructor的值 
-        function Person() {}
+       
+         function Person() {}
          Person.prototype = {
-            constructor：Person，
+            Constructor: Person , //注意这里的逗号与person的间隔  
             name: "test",
             age: 18,
             job: " test system ",
             sayName: function() {
                 console.log(this.name);
             }
-        }
+         }
         var person1 = new Person();
         console.log(person1.constructor === Person);
       
