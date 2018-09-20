@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <div> rewrite the prototype to check out the instance: where person1 prototype is  </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function Person() {}
+         
+        var person1 = new Person();
+        
+        function Person() {}
+        Person.prototype = {
+            Constructor: Person, //注意这里的逗号与person的间隔  
+            name: "test",
+            age: 18,
+            job: " test system ",
+            sayName: function() {
+                console.log(this.name);
+            }
+        }
+        person1.sayName();
+    </script>
+</body>
+
+</html>
