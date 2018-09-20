@@ -1,0 +1,35 @@
+<html>
+
+<body>
+    <div>Subtype 不仅继承了SupterType 而且还新添加了一个方法</div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function SupterType() {
+            this.property = true;
+        }
+
+        SupterType.prototype.getSuperValue = function() {
+            return this.property;
+        }
+
+        function Subtype() {
+            this.subproperty = false;
+        }
+
+        Subtype.prototype = new SupterType();
+
+        Subtype.prototype.getSubValue = function() {
+            return this.subproperty;
+        }
+
+        var instance = new Subtype();
+        console.log(instance.getSuperValue());
+        console.log(instance.getSubValue());
+
+    </script>
+</body>
+
+</html>
