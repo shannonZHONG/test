@@ -1,0 +1,39 @@
+<html>
+
+<body>
+    <div>they are better together</div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.friends = ["gigi", "cici"];
+        }
+
+        Person.prototype = {
+            constructor: Person,
+            sayName: function() {
+                console.log(this.name);
+            }
+        }
+        var s1 = new Person("test", 18, "test engineer ");
+        var s2 = new Person("test1", 18, "test1 engineer");
+        console.log(s1.friends);
+        console.log(s2.friends);
+        s1.friends.push("test test");
+        console.log("one more push array", s1.friends);
+        // the downSide of constructor pattern is can not share 
+        // in other point of view: the constructor pattern can store private data.
+        console.log(s1.friends === s2.friends);
+        // the downSide of prototype pattern is share anything 
+        // in other point of view: save memory storage 100objects can has only one method 
+        console.log(s1.sayName === s2.sayName);
+
+    </script>
+</body>
+
+</html>
