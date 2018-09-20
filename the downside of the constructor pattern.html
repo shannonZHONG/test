@@ -1,0 +1,25 @@
+<html>
+
+<body>
+    <div>the downside of the constructor pattern</div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.sayName = function() {
+                alert(this.name);
+            };
+        }
+        var s1 = new Person();
+        var s2 = new Person();
+        console.log(s1.sayName === s2.sayName); //false
+
+    </script>
+</body>
+
+</html>
