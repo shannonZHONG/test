@@ -19,7 +19,8 @@
         // 直接修改instance 上的primitive value 不会影响到prototype
         person1.name = "changed";
         console.log(person1.name);
-
+        //因为prototype 没有被修改 所以 person2 还是 引用的 prototype 里面 初始化的值 
+        
         var person2 = new Person();
         console.log(person2.name);
 
