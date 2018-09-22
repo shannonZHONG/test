@@ -1,0 +1,40 @@
+<html>
+
+<body>
+    <div>diff changing the primitive value and reference value </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function SuperType() {
+            this.colors = "red" //primitive value 
+        }
+
+        function Subtype() {}
+        Subtype.prototype = new SuperType();
+        var instance1 = new Subtype();
+        instance1.colors = "check";
+        console.log(instance1.colors);
+
+        var instance2 = new Subtype();
+        console.log(instance2.colors);
+
+
+        function magicPrototype() {
+            this.color = ["red"] // reference value 
+        }
+
+        function magicSubPrototype() {}
+        magicSubPrototype.prototype = new magicPrototype();
+        var MagicInstance1 = new magicSubPrototype();
+        MagicInstance1.color.push("test the magic of javascirpt")
+        console.log(MagicInstance1.color);
+
+        var MagicInstance2 = new magicSubPrototype();
+        console.log(MagicInstance2.color);
+
+    </script>
+</body>
+
+</html>
