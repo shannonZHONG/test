@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    <div>inheritance Pattern </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        var Student = function(name) {
+            this.name = name;
+            return this;
+        }
+        var s = {};
+        s = Student.call(s, "testName");
+        console.log(s.name);
+
+        var Teacher = function(name) {
+            this.name = name;
+        }
+        var t = new Teacher("FunTest");
+        console.log(t.name);
+
+        function classcialIn() {
+            this.color = ["red", "blue", "green"];
+        }
+
+        function SubClassicalIn() {
+            classcialIn.call(this);
+        }
+
+        var instance1 = new SubClassicalIn();
+        instance1.color.push("black");
+        console.log(instance1.color);
+
+        var instance2 = new SubClassicalIn();
+        console.log(instance2.color);
+
+        
+
+    </script>
+</body>
+
+</html>
