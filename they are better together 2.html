@@ -1,0 +1,47 @@
+<html>
+
+<body>
+    <div>they are better together 2 </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function SuperType(name, age) {
+            this.name = name;
+            this.age = age;
+            this.colors = ["red", "green", "blue"];
+
+        }
+        SuperType.prototype.sayName = function() {
+            console.log(this.name);
+        }
+        SuperType.prototype.sayAge = function() {
+            console.log(this.age);
+        }
+
+        function subtype(name, age) {
+            SuperType.call(this, name, age);
+
+        }
+        subtype.prototype = new SuperType();
+        subtype.prototype.constructor = subtype;
+        subtype.prototype.sayAge = function() {
+            console.log(this.age);
+        }
+
+        var instance1 = new subtype("test", 18);
+        instance1.colors.push("hello just want to check out");
+        console.log(instance1.colors);
+        instance1.sayAge();
+        instance1.sayName();
+
+        var instance2 = new subtype("number 2 ", 18);
+        console.log(instance2.colors);
+        instance2.sayAge();
+        instance2.sayName();
+
+    </script>
+</body>
+
+</html>
