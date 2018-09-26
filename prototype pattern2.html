@@ -1,0 +1,31 @@
+<html>
+
+
+<body>
+    <div>prototype pattern : share the same prototype </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+     var Test = {
+       name: "test",
+       Subjectmarks:["40","60","80"]
+};
+     var student1 = Object(Test);
+     student1.name = "Lily";
+     student1.Subjectmarks.push("add new subject mark: 85");
+     console.log(student1.Subjectmarks);
+    
+     var student2 = Object(Test);
+     student2.name = "Gigi";
+     student2.Subjectmarks.push("add new subject mark: 90");
+     console.log(student2.Subjectmarks);
+     console.log(Test.Subjectmarks);
+     
+      
+
+    </script>
+</body>
+
+</html>
