@@ -1,0 +1,27 @@
+<html>
+
+
+<body>
+    <div>Parasitic pattern </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        function createObject(original) {
+            var clone = Object(original);
+            clone.sayHi = function() {
+                console.log("hello")
+            };
+            return clone;
+        }
+        var student = {
+        name:"hello",
+        test:["30","50","90"]
+}
+        var instance1 = createObject(student);
+        instance1.sayHi();
+    </script>
+</body>
+
+</html>
