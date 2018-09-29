@@ -1,0 +1,104 @@
+<html>
+
+
+<body>
+    <div>this </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        console.log("The default conversion from an object to string is  [object Object] ");
+
+
+
+        function func() {
+            console.log("1.0 func被 window invoke" + this);
+        }
+        func.call(undefined);
+
+
+
+        // member function 
+        var obj = {
+            foo: function() {
+                console.log("2.0 foo 被 obj invoke  " + this)
+            }
+        }
+        obj.foo.call(obj);
+
+
+
+
+        var test = {
+            Test: function() {
+                console.log("3.0 和 4.0 分别是 Test 被 test invoke  " + this)
+            }
+        }
+        var HelloTest = test.Test;
+        test.Test.call(test);
+        HelloTest.call(window);
+
+
+
+
+
+        function fn() {
+            console.log(" test arrTest[0] 是什么" + this);
+        }
+        var arrTest = [fn];
+        arrTest[0]();
+        // arrTest.0.();
+        // arrTest.0.call(arrTest)
+
+
+
+
+        function hello(thing) {
+            console.log("Hello " + thing);
+        }
+
+        // this:
+        hello("world");
+
+        // desugars to:
+        hello.call(window, "test OKay by setting  this  to window");
+        // only when using strict mode 
+        hello.call(undefined, "world by setting this to undefined  ");
+
+
+
+
+
+
+        function Hello(thing) {
+            console.log("invoked the hello method with this set to Hello and a single argument world " + this + "says hello " + thing);
+        }
+
+        Hello.call("Hello", "world") //=> Hello says hello world
+
+
+
+
+        // what happens if we attach is to the object dynamically
+
+
+        Day = {
+            whatDay: "monday",
+            test: function(thing) {
+                console.log(this + " is " + thing);
+            }
+        };
+
+        Day.test.call(Day, "sunnyDay")
+
+
+
+        function MonDay(thing) {
+            console.log(this + " is " + thing);
+        }
+
+        Day1 = {
+            whatDay1: "monday",
+        }
+        MonDay.call(Day1, "sunnyDay")
