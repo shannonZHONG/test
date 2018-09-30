@@ -1,0 +1,107 @@
+<html>
+
+
+<body>
+    <div> this overview </div>
+    <ul>
+        <li>step by step</li>
+        <li>day day up</li>
+    </ul>
+    <script>
+        // 1.0 with or without strict mode when the default value is winodw or undefined  
+
+        // 2.0 invoke funciton with call method 
+        function func(arg1, arg2) {
+            console.log(this);
+            console.log(arg1);
+            console.log(arg2);
+        }
+
+        func.call("a", "b", "c");
+        func.call("a", ["b", "c"]);
+
+        var obj = {
+            method: function() {
+                console.log(this === obj)
+            }
+        }
+        obj.method.call(obj);
+        
+        
+        
+
+        // 3.0 this in constructor 
+
+        var savedThis;
+
+        function Constr() {
+            savedThis = this;
+            console.log(this);
+        }
+
+        var inst = new Constr();
+        console.log(savedThis === inst);
+
+        // 4.0 without new  
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        var p = Point(7, 5);
+        console.log(p === undefined);
+        console.log(x);
+        console.log(y);
+        //  apply strict mode to have a warning 
+
+        // 5.0 how to call the function 
+        function callIt(func) {
+            func();
+        }
+        var Counter = {
+            count: 0,
+            inc: function() {
+                this.count++;
+            }
+        }
+        //callIt(Counter.inc)();
+        // didnot work out Because the this in counter inc  is set to window object
+
+        console.log(Counter.count);
+
+        // 6.0  shadowing  this  
+       
+         var obj = {
+            name: 'Jane',
+            friends: ['Tarzan', 'Cheeta'],
+            loop: function() {
+                'use strict';
+                this.friends.forEach(
+                    function(friend) {
+                        console.log(this.name + ' knows ' + friend);
+                    }
+                );
+            }
+        };
+        // obj.loop(); // TypeError: Cannot read property 'name' of undefined
+        
+        
+        var obj = {
+            name: 'hello world ',
+            friends: ['test hello world']
+        }
+        obj.loop = function() {
+                this.friends.forEach(
+                    function(friend) {
+                        console.log(this === window);
+                    });
+        }
+        obj.loop();
+        
+        // 7.0 
+        
+                
+
+    </script>
+</body>
+
+</html>
