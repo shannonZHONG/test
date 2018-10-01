@@ -102,3 +102,31 @@
             whatDay1: "monday",
         }
         MonDay.call(Day1, "sunnyDay")
+        
+        
+        
+         function MonDay(thing) {
+            console.log(this + " is " + thing);
+        }
+        Day1 = {
+            whatDay1: "monday",
+        }
+        MonDay.call(123, "sunnyDay")
+        
+        
+         function MonDay(thing) {
+            console.log(this + " is " + thing);
+        }
+        Day1 = {
+            whatDay1: "monday",
+        }
+        MonDay.call("test", "sunnyDay") 
+        
+        
+         function MonDay(thing) {
+            console.log(this + " is " + thing);
+        }
+        Day1 = {
+            whatDay1: "monday",
+        }
+        MonDay.call(false, "sunnyDay")        
