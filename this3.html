@@ -116,7 +116,7 @@
       
        
 
-        console.log(Counter.count);
+    
 
         // 6.0  shadowing  this   or   Implicit Binding and lost  
         // 6.0.1
@@ -162,6 +162,33 @@
         // didnot work out Because the this in counter inc  is set to window object        
                 
 
+        
+        // 7.0 default  new   Implicit   Explicit which one has  lowest priority ? 
+        // 7.0.1 defalut:  lowest priority 
+        // 7.0.1 Implicit   Explicit    which one has higher proority? 
+        //  Explicit  win 
+        
+        function foo() {
+            console.log(this.a);
+        }
+        var obj1 = {
+            a: 2,
+            foo: foo
+        };
+        var obj2 = {
+            a: 3,
+            foo: foo
+        };
+        obj1.foo();
+        obj2.foo();
+        
+        obj1.foo.call(obj2);
+        obj2.foo.call(obj1);
+        
+        // 7.0.2 new and Implicit  which one has lowest priority ?
+        
+        
+        
     </script>
 </body>
 
