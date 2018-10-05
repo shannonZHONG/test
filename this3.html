@@ -137,8 +137,8 @@
 
     
 
-        // 6.0  shadowing  this   or   Implicit Binding and lost  
-        // 6.0.1
+        // 5.0  shadowing  this   or   Implicit Binding and lost  
+        // 5.0.1
         
         var obj = {
             name: 'Jane',
@@ -167,7 +167,7 @@
         }
         obj.loop();
         
-        // 6.0.2
+        // 5.0.2
          function callIt(func) {
             func();
         }
@@ -182,9 +182,9 @@
                 
 
         
-        // 7.0 default  new   Implicit   Explicit which one has  lowest priority ? 
-        // 7.0.1 defalut:  lowest priority 
-        // 7.0.1 Implicit   Explicit    which one has higher proority? 
+        // 6.0 default  new   Implicit   Explicit which one has  lowest priority ? 
+        // 6.0.1 defalut:  lowest priority 
+        // 6.0.1 Implicit   Explicit    which one has higher proority? 
         //  Explicit  win 
         
         function foo() {
@@ -204,7 +204,7 @@
         obj1.foo.call(obj2);
         obj2.foo.call(obj1);
         
-        // 7.0.2 new and Implicit  which one has lowest priority ?
+        // 6.0.2 new and Implicit  which one has lowest priority ?
         //new win 
         function foo(something) {
         this.a = something;
@@ -226,7 +226,7 @@
         console.log(obj1.a);
         console.log(bar.a); 
         
-        //  7.0.3  Explicit new which one has lowest priority
+        //  6.0.3  Explicit new which one has lowest priority
         //  not 100% confirm : Explicit win
         function foo(something) {
             this.a = something;
@@ -241,10 +241,10 @@
         console.log(baz.a);        
         
         
-        // 8.0 例外 
-        //8.0.1 
-        //8.0.2
-        //8.0.3
+        // 7.0 例外 
+        //7.0.1 
+        //7.0.2
+        //7.0.3
         
         
         
