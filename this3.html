@@ -242,9 +242,37 @@
         
         
         // 7.0 例外 
-        //7.0.1 
-        //7.0.2
-        //7.0.3
+        //7.0.1 没有需要传的对象 但仍然需要一个占位符 
+          function foo(a, b) {
+          console.log("a:" + a + "b:" + b);
+        }
+
+        foo.apply(null,[2, 3]);  
+        // 7.0.1.1 使用占位符之后 this 一不小心被绑到了window 怎么办？ 引入DMZ 
+          function foo(a, b) {
+          console.log("a:" + a + "b:" + b);
+        }
+         function foo(a, b) {
+         console.log("a:" + a + "b:" + b);
+        }
+        var empty = Object.create(null); // object.create 不会创建object.prototype
+        foo.apply(empty,[2,3]);        
+        //7.0.2 目标函数 被调用 使用默认绑定
+           function foo() {
+           console.log(this.a);
+        }
+        var a = 2;
+        var o = {
+        a:3,foo: foo
+};
+        var p = {a: 4};
+        o.foo(o);
+        (p.foo = o.foo)();        
+        //7.0.3  
+        
+       
+        
+        
         
         
         
