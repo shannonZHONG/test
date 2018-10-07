@@ -58,17 +58,17 @@
 *   null、undefined和未声明变量之间有什么区别？如何检查判断这些状态值？<br>
 *   请说明.forEach循环和.map()循环的主要区别，它们分别在什么情况下使用？<br>              
 * 匿名函数的典型应用场景是什么？<br>
-	* .call和.apply有什么区别？ <br>
-	* 说明Function.prototype.bind的用法。<br>
-	* 什么时候会用到document.write()？<br>
-	* 请解释变量提升（hoisting）<br>
-	* 扩展 JavaScript 内置对象是不好的做法<br>
-	* 什么是"use strict";？使用它有什么优缺点？<br>  
-	* 使用什么语句遍历对象的属性和数组的元素 <br>
-	* 创建一个循环，从 1 迭代到 100，3的倍数时输出 "fizz"，5的倍数时输出 "buzz"，同时为3和5的倍数时输出 "fizzbuzz"。  <br>  
-	* 解释function foo() {}和var foo = function() {}之间foo的用法上的区别。<br>
-        * 高阶函数（higher-order）的定义是什么？<br>
-        * 请给出一个解构（destructuring）对象或数组的例子<br>        
+* .call和.apply有什么区别？ <br>
+* 说明Function.prototype.bind的用法。<br>
+* 什么时候会用到document.write()？<br>
+* 请解释变量提升（hoisting）<br>
+* 扩展 JavaScript 内置对象是不好的做法<br>
+* 什么是"use strict";？使用它有什么优缺点？<br>  
+* 使用什么语句遍历对象的属性和数组的元素 <br>
+* 创建一个循环，从 1 迭代到 100，3的倍数时输出 "fizz"，5的倍数时输出 "buzz"，同时为3和5的倍数时输出 "fizzbuzz"。  <br>  
+* 解释function foo() {}和var foo = function() {}之间foo的用法上的区别。<br>
+* 高阶函数（higher-order）的定义是什么？<br>
+* 请给出一个解构（destructuring）对象或数组的例子<br>        
               
               
 ## 6.0 bom<br>
