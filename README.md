@@ -1,8 +1,11 @@
 storing and reviewing  the code when I learn every single point of javascirpt built_in API <br>
 1.0 prototype and _proto_ 多个文件需要合并<br>
 2.0 scope and closure<br>
+2.0.1 
 3.0 this多个文件需要合并<br>
-4.0 reference vs primitive value <br>
+4.0 reference value vs primitive value <br>
+4.0.1  why and what value to store  in  stack and heap? <br>
+4.0.2  what is reference value  and how to apply to it? <br>
 5.0 oop <br>
 6.0 特别的对象 之 函数 <br>
 7.0 bom<br>
