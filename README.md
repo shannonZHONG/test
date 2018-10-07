@@ -67,8 +67,8 @@
 	* 使用什么语句遍历对象的属性和数组的元素 <br>
 	* 创建一个循环，从 1 迭代到 100，3的倍数时输出 "fizz"，5的倍数时输出 "buzz"，同时为3和5的倍数时输出 "fizzbuzz"。  <br>  
 	* 解释function foo() {}和var foo = function() {}之间foo的用法上的区别。<br>
-		* 高阶函数（higher-order）的定义是什么？<br>
-		* 请给出一个解构（destructuring）对象或数组的例子<br>        
+        * 高阶函数（higher-order）的定义是什么？<br>
+        * 请给出一个解构（destructuring）对象或数组的例子<br>        
               
               
 ## 6.0 bom<br>
