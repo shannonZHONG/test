@@ -55,8 +55,8 @@
 
 * 请解释下面代码为什么不能用作 IIFE：function foo(){ }();，<br>
 * 需要作出哪些修改才能使其成为 IIFE？<br>
-*   null、undefined和未声明变量之间有什么区别？如何检查判断这些状态值？<br>
-*   请说明.forEach循环和.map()循环的主要区别，它们分别在什么情况下使用？<br>              
+* null、undefined和未声明变量之间有什么区别？如何检查判断这些状态值？<br>
+* 请说明.forEach循环和.map()循环的主要区别，它们分别在什么情况下使用？<br>              
 * 匿名函数的典型应用场景是什么？<br>
 * .call和.apply有什么区别？ <br>
 * 说明Function.prototype.bind的用法。<br>
