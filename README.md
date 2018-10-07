@@ -1,6 +1,6 @@
 storing and reviewing  the code when I learn every single point of javascirpt built_in API <br>
 1.0 prototype and _proto_ 多个文件需要合并<br>
-1.0.? 面试问题： &#8195  请解释原型继承（prototypal inheritance）的工作原理
+1.0.? 面试问题：&nbsp 请解释原型继承（prototypal inheritance）的工作原理
 
 
 
@@ -14,7 +14,7 @@ storing and reviewing  the code when I learn every single point of javascirpt bu
 2.0.5 closure <br>
 2.0.6 why we need let?<br>
 2.0.7 垃圾回收<br>
-2.0.8 面试问题：&#8195 什么是闭包（closure），为什么使用闭包？<br>
+2.0.8 面试问题: 什么是闭包（closure），为什么使用闭包？<br>
               &#8195 为什么不要使用全局作用域？<br>
               &#8195 使用let、var和const创建变量有什么区别<br>
   
