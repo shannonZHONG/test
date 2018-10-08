@@ -75,7 +75,7 @@
 ## 7.0 Dom<br>
 ## 8.0 事件<br>
 ## 9.0 canvas<br>
-## 10.0 JSOn<br>
+## 10.0 Json<br>
 ## 11.0 Ajax<br>
 ## 12.0 表单<br>
 
