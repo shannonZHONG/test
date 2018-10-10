@@ -1,6 +1,6 @@
 # storing and reviewing  the code when I learn every single point of javascirpt built_in API <br>
 ## 1.0 prototype and _proto_ 多个文件需要合并<br>
-### 1.0.? 面试问题：<br>
+### 1.0.1 面试问题：<br>
 
 * 请解释原型继承（prototypal inheritance）的工作原理<br>
 
@@ -9,16 +9,7 @@
 
 
 ## 2.0 scope and closure<br>
-### 2.0.1 execution context and her/his properties （执行环境/执行上下文)<br>
-### 2.0.2 scope types <br>
-### 2.0.3 scope  vs context <br>
-### 2.0.4 scope chain<br>
-### 2.0.5 closure <br>
-### 2.0.6 why we need let?<br>
-### 2.0.7 垃圾回收<br>
-### 2.0.8 面试问题:<br>
-
-
+### 2.0.1 面试问题:<br>
 * 什么是闭包（closure），为什么使用闭包？<br>
 * 为什么不要使用全局作用域？<br>
 * 使用let、var和const创建变量有什么区别<br>
@@ -38,9 +29,7 @@
 
 
 ## 4.0 reference value vs primitive value <br>
-### 4.0.1  why and what does the value to store  in  stack and heap? <br>
-### 4.0.2  what is reference value  and how to apply to it? <br>
-### 4.0.3  面试问题：<br>
+### 4.0.1  面试问题：<br>
 
 * 宿主对象（host objects）和原生对象（native objects）的区别是什么？<br>
 * 下列语句有什么区别：function Person(){}<br>
