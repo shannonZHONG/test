@@ -19,9 +19,7 @@
   
   
 ## 3.0 this多个文件需要合并<br>
-### 3.0.1 why we need this ?<br>
-### 3.0.2 how to apply this?<br>
-### 3.0.3 面试问题：<br>
+### 3.0.1 面试问题：<br>
 
 * 请简述JavaScript中的this;<br>
       
