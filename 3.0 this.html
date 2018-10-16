@@ -141,10 +141,9 @@
        
         
         
-        // 3.0 this in constructor 
+        // 3.0 with new 
 
         var savedThis;
-
         function Constr() {
             savedThis = this;
             console.log(this);
@@ -152,7 +151,6 @@
 
         var inst = new Constr();
         console.log(savedThis === inst);
-
         
         
         // 4.0 without new  
@@ -165,7 +163,6 @@
         console.log(x);
         console.log(y);
         //  apply strict mode to have a warning 
-
       
        
 
