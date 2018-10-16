@@ -10,29 +10,58 @@
         <li> 3.0.2 how to apply this? </li>      
     </ul>
     <script>
-        // 1.0 with or without strict mode when the default value is winodw or undefined  
+        // 1.0.0 with or without strict mode when the default value is winodw or undefined  
         function f(){
         'use strict'
         console.log(this)
         }
         f.call(1) // 数字1 
         
-        
+        // 1.0.1
         function f(){
         console.log(this)
         }
         f.call(1) // 对象1 
         
+        //1.0.2
         function f(){
         console.log(this)
         }
         f.call() // window 
         
+        //1.0.3
         function f(){
         'use strict'
         console.log(this)
         }
         f.call() // undefined 
+        
+        //1.0.4
+        function f1() {
+        console.log(" without strict" + this);
+        }
+        // 返回false，因为"this"指向全局对象，"!this"就是false
+        f1();
+        
+        
+        function f2() {
+            "use strict";
+            console.log(" with strict " + this);
+        }
+        f2();
+        // 返回true，因为严格模式下，this的值为undefined，所以"!this"为true。
+        // without new 
+        
+        
+        
+        function f3() {
+            "use strict";
+            this.a = 1;
+        };
+        f3();  
+        // 参考：http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html        
+        
+        
         
         
         
