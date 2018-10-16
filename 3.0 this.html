@@ -11,7 +11,28 @@
     </ul>
     <script>
         // 1.0 with or without strict mode when the default value is winodw or undefined  
-
+        function f(){
+        'use strict'
+        console.log(this)
+        }
+        f.call(1) // 数字1 
+        
+        
+        function f(){
+        console.log(this)
+        }
+        f.call(1) // 对象1 
+        
+        function f(){
+        console.log(this)
+        }
+        f.call() // window 
+        
+        function f(){
+        'use strict'
+        console.log(this)
+        }
+        f.call() // undefined 
         
         
         
@@ -104,6 +125,9 @@
         };
         var a = "oops, global"; 
         doFoo( obj.foo );
+        
+        
+            
         
         
         
