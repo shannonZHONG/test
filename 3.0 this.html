@@ -213,7 +213,27 @@
         }
         //callIt(Counter.inc)();
         // didnot work out Because the this in counter inc  is set to window object        
+           
+        // 5.0.3
+        // obj.foo 相当于是被 window 这个object call  所以是隐式绑定 
+        function foo() {
+          console.log(this.a);
+        }
+
+        function doFoo(fn) {
+           
+            fn(); 
+        }
+        
+        var obj = {
+            a: 2,
+            foo: foo
+        };
+        
+        var a = "oops, global"; 
+        doFoo( obj.foo ); //oops, global
                 
+        
 
         
         // 6.0 default  new   Implicit   Explicit which one has  lowest priority ? 
@@ -274,25 +294,8 @@
         console.log(obj1.a);
         console.log(baz.a);  
         
-        // 6.0.4 
-        // obj.foo 相当于是被 window 这个object call  所以是隐式绑定 
-        function foo() {
-          console.log(this.a);
-        }
-
-        function doFoo(fn) {
-           
-            fn(); 
-        }
-        
-        var obj = {
-            a: 2,
-            foo: foo
-        };
-        
-        var a = "oops, global"; 
-        doFoo( obj.foo ); //oops, global
-        
+    
+      
         
         // 7.0 例外 
         //7.0.1 没有需要传的对象 但仍然需要一个占位符 
