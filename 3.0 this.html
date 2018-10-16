@@ -245,7 +245,8 @@
         console.log(obj1.a);
         console.log(baz.a);  
         
-        
+        // 6.0.4 
+        // obj.foo 相当于是被 window 这个object call  所以是隐式绑定 
         function foo() {
           console.log(this.a);
         }
