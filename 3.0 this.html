@@ -233,7 +233,9 @@
     
 
         // 5.0  shadowing  this   or   Implicit Binding and lost  
-        // 5.0.1 不能直接把 object method 当作 function 来调用  except object method  === function 
+        // 5.0.1  what happens if we attach is to the object dynamically  
+        
+        
         
         var obj = {
             name: 'Jane',
@@ -249,6 +251,7 @@
         };
         // obj.loop(); 
         // TypeError: Cannot read property 'name' of undefined
+     
         
         
         var obj = {
@@ -262,6 +265,17 @@
                     });
         }
         obj.loop();
+        
+        
+        Day = {
+            whatDay: "monday",
+            test: function(thing) {
+                console.log(this + " is " + thing);
+            }
+        };
+
+        Day.test.call(Day, "sunnyDay")        
+        
         
         // 5.0.2
         function callIt(func) {
