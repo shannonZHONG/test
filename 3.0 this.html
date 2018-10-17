@@ -62,7 +62,7 @@
         // 参考：http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html        
         
         
-        
+      
         
         
         // 2.0 Explicit Binding: funciton with call(),apply() and bind()
@@ -137,10 +137,51 @@
         var obj = {
             id: "test"
         };
-        [1, 2, 3].forEach(foo, obj);        
+        [1, 2, 3].forEach(foo, obj);   
+        
+        
        
+        // 2.0.6
+        var obj = {
+            foo: function() {
+                console.log("2.0 foo 被 obj invoke  " + this)
+            }
+        }
+        obj.foo.call(obj);            
+        
+
+        
+        // 2.0.7 
+        var test = {
+            Test: function() {
+                console.log("3.0 和 4.0 分别是 Test 被 test invoke  " + this)
+            }
+        }
+        var HelloTest = test.Test;
+        test.Test.call(test);
+        HelloTest.call(window);
         
         
+        
+        // 2.0.8 
+        function hello(thing) {
+            console.log("Hello " + thing);
+        }
+
+        // this:
+        hello("world");
+
+        // desugars to:
+        hello.call(window, "test OKay by setting  this  to window");
+        // only when using strict mode 
+        hello.call(undefined, "world by setting this to undefined  ");
+        
+        
+        
+        
+
+
+
         // 3.0 with new 
 
         var savedThis;
