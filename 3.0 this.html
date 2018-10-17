@@ -43,7 +43,7 @@
         // 返回false，因为"this"指向全局对象，"!this"就是false
         f1();
         
-        
+        // 1.0.5 
         function f2() {
             "use strict";
             console.log(" with strict " + this);
@@ -53,7 +53,7 @@
         // without new 
         
         
-        
+        // 1.0.6
         function f3() {
             "use strict";
             this.a = 1;
@@ -61,8 +61,12 @@
         f3();  
         // 参考：http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html        
         
+        // 1.0.7 
+        function func() {
+            console.log("1.0 func被 window invoke" + this);
+        }
+        func.call(undefined);        
         
-      
         
         
         // 2.0 Explicit Binding: funciton with call(),apply() and bind()
@@ -175,6 +179,25 @@
         hello.call(window, "test OKay by setting  this  to window");
         // only when using strict mode 
         hello.call(undefined, "world by setting this to undefined  ");
+        
+        
+        //2.0.9 
+        function fn() {
+           console.log(" test arrTest[0] 是什么" + this);
+        }
+        var arrTest = [fn];
+        arrTest[0]();
+        // arrTest.0.();
+        // arrTest.0.call(arrTest) 
+        
+        
+        // 2.0.10 
+        function Hello(thing) {
+           console.log("invoked the hello method with this set to Hello and a single argument world " + this + "says hello " + thing);
+        }
+
+        Hello.call("Hello", "world") //=> Hello says hello world        
+        
         
         
         
