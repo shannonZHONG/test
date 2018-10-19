@@ -37,7 +37,7 @@
 
 
 
-## 5.0 特别的对象 之 函数 <br>
+## 5.0 reference value ：函数<br>
 ### 5.0.1 面试问题：<br> 
 
 * 请解释下面代码为什么不能用作 IIFE：function foo(){ }();，<br>
@@ -57,8 +57,8 @@
 * 高阶函数（higher-order）的定义是什么？<br>
 * 请给出一个解构（destructuring）对象或数组的例子<br>        
               
-## 6.0 <br>
-## 7.0 <br>
+## 6.0 data type <br>
+## 7.0 primitive value ：the Array <br>
 ## 8.0 bom<br>
 ## 9.0 Dom<br>
 ## 10.0 事件<br>
