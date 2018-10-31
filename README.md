@@ -58,14 +58,14 @@
 * 请给出一个解构（destructuring）对象或数组的例子<br>        
               
 ## 6.0 Data type <br>
-## 7.0 primitive value ：the Array <br>
-## 8.0 bom<br>
-## 9.0 Dom<br>
-## 10.0 事件<br>
-## 11.0 canvas<br>
-## 12.0 Json<br>
-## 13.0 Ajax<br>
-## 14.0 表单<br>
-## 15.0 各种数据之间的转换<br>
+## 7.0 各种数据之间的转换<br>
+## 8.0 primitive value ：the Array <br>
+## 9.0 bom<br>
+## 10.0 Dom<br>
+## 11.0 事件<br>
+## 12.0 canvas<br>
+## 13.0 Json<br>
+## 14.0 Ajax<br>
+## 15.0 表单<br>
 
 
