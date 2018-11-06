@@ -3,9 +3,9 @@
 ### 1.0.1 面试问题：<br>
 
 * 请解释原型继承（prototypal inheritance）的工作原理<br>
-
-
-
+* 为什么扩展 JavaScript 内置对象是不好的做法<br>
+* 你如何组织自己的代码？（使用模块模式（module pattern）还是经典继承（classical inheritance）？）
+* 说明Function.prototype.bind的用法。<br>
 
 
 ## 2.0 scope and closure<br>
@@ -22,9 +22,8 @@
 ### 3.0.1 面试问题：<br>
 
 * 请简述JavaScript中的this;<br>
-      
 
-
+     
 
 ## 4.0 reference value vs primitive value <br>
 ### 4.0.1  面试问题：<br>
@@ -55,10 +54,14 @@
 * 创建一个循环，从 1 迭代到 100，3的倍数时输出 "fizz"，5的倍数时输出 "buzz"，同时为3和5的倍数时输出 "fizzbuzz"。  <br>  
 * 解释function foo() {}和var foo = function() {}之间foo的用法上的区别。<br>
 * 高阶函数（higher-order）的定义是什么？<br>
-* 请给出一个解构（destructuring）对象或数组的例子<br>        
-              
+* 请给出一个解构（destructuring）对象或数组的例子<br>  
+* 为什么不要使用全局作用域？<br>
+
+
 ## 6.0 Data type <br>
+* 扩展 JavaScript 内置对象是不好的做法？
 ### 6.0.2 各种数据之间的转换<br>
+* ==和===的区别是什么？
 ## 7.0 primitive value ：the Array <br>
 ## 8.0 bom<br>
 ## 9.0 Dom<br>
