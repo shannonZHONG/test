@@ -62,6 +62,7 @@
 ## 7.0 primitive value ：the Array <br>
 ## 8.0 bom<br>
 ## 9.0 Dom<br>
+* attribute” 和 “property” 之间有什么区别？
 ## 10.0 事件<br>
 ## 11.0 canvas<br>
 ## 12.0 Json<br>
