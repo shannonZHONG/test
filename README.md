@@ -26,15 +26,15 @@
      
 
 ## 4.0 reference value vs primitive value <br>
+
 ### 4.0.1  面试问题：<br>
 
 * 宿主对象（host objects）和原生对象（native objects）的区别是什么？<br>
 * 下列语句有什么区别：function Person(){}<br>
 * person = Person()和var person = new Person()？<br>
-* 请解释可变对象和不可变对象之间的区别。 <br>              
-
-
-
+* 请解释可变对象和不可变对象之间的区别。 <br>  
+* 扩展 JavaScript 内置对象是不好的做法？<br>
+* ==和===的区别是什么？<br>
 
 ## 5.0 reference value ：函数<br>
 ### 5.0.1 面试问题：<br> 
@@ -58,17 +58,22 @@
 * 为什么不要使用全局作用域？<br>
 
 
-## 6.0 Data type <br>
-* 扩展 JavaScript 内置对象是不好的做法？
-### 6.0.2 各种数据之间的转换<br>
-* ==和===的区别是什么？
-## 7.0 primitive value ：the Array <br>
-## 8.0 bom<br>
-## 9.0 Dom<br>
-* attribute” 和 “property” 之间有什么区别？
-## 10.0 事件<br>
-## 11.0 canvas<br>
-## 12.0 Json<br>
-## 13.0 Ajax<br>
+
+
+## 6.0 primitive value ：the Array 
+## 7.0 bom
+## 8.0 Dom
+* attribute” 和 “property” 之间有什么区别？<br>
+## 9.0 事件
+## 10.0 canvas 
+## 11.0 Json 
+## 12.0 Ajax 
+## 13.0 与前端 相关的知识点 
+### 13.1  命令行  
+### 13.2  脚本
+### 13.3  node.js server 
+## 14.0虚拟DOM 
+## 15.0 cookie 
+## 16.0 session  
 
 
