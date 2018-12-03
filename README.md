@@ -13,7 +13,7 @@
 * 使用let、var和const创建变量有什么区别<br>
   
  
-## 3.0 this多个文件需要合并<br>
+## 3.0 this<br>
 ### 3.0.1 面试问题：<br>
 
 * 请简述JavaScript中的this;<br>
