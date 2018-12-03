@@ -1,5 +1,5 @@
-### prototype 和 _proto_ 1.0.1 面试问题：<br>
-
+## 1.0prototype 和 _proto_  面试问题：<br>
+### 1.0.1  面试问题
 * 请解释原型继承（prototypal inheritance）的工作原理<br>
 * 为什么扩展 JavaScript 内置对象是不好的做法<br>
 * 你如何组织自己的代码？（使用模块模式（module pattern）还是经典继承（classical inheritance）？）
@@ -54,11 +54,10 @@
 
 
 
-## 6.0 primitive value ：the Array 
-## 7.0 bom
-## 8.0 Dom
+## 6.0 bom
+## 7.0 Dom
 * attribute” 和 “property” 之间有什么区别？<br>
-## 9.0 事件
+## 8.0 事件
 
 
 
