@@ -1,6 +1,4 @@
-# storing and reviewing  the code when I learn every single point of javascirpt built_in API <br>
-## 1.0 prototype and _proto_ 多个文件需要合并<br>
-### 1.0.1 面试问题：<br>
+### prototype 和 _proto_ 1.0.1 面试问题：<br>
 
 * 请解释原型继承（prototypal inheritance）的工作原理<br>
 * 为什么扩展 JavaScript 内置对象是不好的做法<br>
@@ -14,17 +12,13 @@
 * 为什么不要使用全局作用域？<br>
 * 使用let、var和const创建变量有什么区别<br>
   
-  
-  
-  
-  
+ 
 ## 3.0 this多个文件需要合并<br>
 ### 3.0.1 面试问题：<br>
 
 * 请简述JavaScript中的this;<br>
 
      
-
 ## 4.0 reference value vs primitive value <br>
 
 ### 4.0.1  面试问题：<br>
@@ -65,16 +59,6 @@
 ## 8.0 Dom
 * attribute” 和 “property” 之间有什么区别？<br>
 ## 9.0 事件
-## 10.0 canvas 
-## 11.0 Json 
-## 12.0 Ajax 
-## 13.0 与前端 相关的知识点 
-### 13.1  命令行  
-### 13.2  脚本
-### 13.3  node.js server 
-## 14.0虚拟DOM 
-## 15.0 cookie 
-## 16.0 session  
 
 
 
