@@ -1,6 +1,6 @@
 1.0prototype 和 _proto_：经典博文；深入浅出第四节课；红宝书第六章；经典pdf；任务23 <br>
 2.0 scope and closure：经典博文；经典pdf 红宝书第四章 <br>
-3.0 this：经典博文；经典pdf<br>     
+3.0 this：经典博文;经典pdf<br>     
 4.0 reference value vs primitive value： 任务21 22 23 26 深入浅出第八课 红宝书 第五章 第七章<br>
 5.0 reference value ：函数 任务 27 深入浅出第二课  <br>
 6.0 bom 红宝书第八章 <br>
