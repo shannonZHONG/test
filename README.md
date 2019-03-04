@@ -1,8 +1,5 @@
-1.0prototype 和 _proto_：经典博文；深入浅出第四节课；红宝书第六章；经典pdf；任务23 任务 40  <br>
-2.0 scope and closure：经典博文；经典pdf 红宝书第四章;es6 深入浅出 第一节课 let var const  <br>
-3.0 this：经典博文;经典pdf<br>     
-4.0 reference value vs primitive value：任务21 22 23 26 深入浅出第八课 红宝书 第五章 第七章<br>
-5.0 reference value ：函数 任务 27 深入浅出第二课  <br>
+
+需要写的： 还没有完成的<br>
 6.0 bom  <br>
 7.0 Dom 任务28 <br>
 8.0 事件 任务33 <br>
