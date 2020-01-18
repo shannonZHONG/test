@@ -259,7 +259,7 @@ var local = "变量";
 
 
   
-#### IIFE<br>
+### IIFE<br>
 4.0 在原来没有let的时光里，是怎么搞出一个块级作用域的?<br>
 IIFE<br>
 IIFE的使用注意：<br>
@@ -285,7 +285,7 @@ IIFE的使用注意：<br>
  var test = outPutNumbers(3);      
 ```
 
-##### 垃圾回收<br>
+### 垃圾回收<br>
 如果一个对象没有被引用，它就是垃圾<br>
 ``` 
 var a = { name:'a'};
