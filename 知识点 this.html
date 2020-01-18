@@ -39,19 +39,11 @@
         f() // undefined 
         
         
-        // 1.0.4
-        function f3() {
-            "use strict";
-            this.a = 1;
-        };
-        f3();  
+      
+    
         // 参考：http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html        
         
-        // 1.0.5
-        function func() {
-            console.log("1.0 func被 window invoke" + this);
-        }
-        func.call(undefined);        
+       
         
         
         
