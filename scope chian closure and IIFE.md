@@ -1,18 +1,6 @@
-### 2.0.1 execution context（执行环境/执行上下文) 
-2.0.1.0 why we need exection context? <br>
-2.0.1.1 what type of exection context?<br>
-2.0.1.2 else <br>
-
-
-### 2.0.2 scope and types 
-2.0.2.0 what is scope <br>
-2.0.2.1 type of scope <br>
-
-
-
-### 2.0.3 scope chain的应用<br>
-2.0.4.1 树型结构<br>
-2.0.4.2 例题一：<br> 
+###  scope chain的应用<br>
+1.0 树型结构<br>
+2.0 例题一：<br> 
 
 ``` 
             var a = 1;
@@ -106,7 +94,7 @@
 例题六：<br>
 
 ```   
-// 作用域链是颗🌲 只能向上看 never ever look down 
+
         var a = 1;
 
         function f1() {
@@ -210,8 +198,8 @@ for(var i=0; i<6; i++){
 }
  
  ```
-### 2.0.4 closure <br>
-2.0.5.0「函数」和「函数内部能访问到的变量」（也叫环境）的总和，就是一个闭包。<br>
+### closure <br>
+3.0「函数」和「函数内部能访问到的变量」（也叫环境）的总和，就是一个闭包。<br>
 或者说 
 闭包是一个函数.<br>
 一个什么样的函数?<br>
@@ -227,7 +215,7 @@ var local = "变量";
  ```
  
  
-2.0.4.1 :<br> 
+3.1 closure 另外一个例子 :<br> 
 
   ```
  function createComparisonFunction(propertyName) {
@@ -247,18 +235,9 @@ var local = "变量";
         }
 
  ```
- 
-
-
-
-
-
 
  
-
-
- 
-2.0.4.2闭包的目的：<br>
+3.2 闭包的目的：<br>
 隐藏变量<br>
 如果不把local 放在 function foo 里面  local 就成glocal value<br> 
  
@@ -280,8 +259,8 @@ var local = "变量";
 
 
   
-### 2.0.5why we need let?<br>
-2.0.1 在原来没有let的时光里，是怎么搞出一个块级作用域的?<br>
+#### IIFE<br>
+4.0 在原来没有let的时光里，是怎么搞出一个块级作用域的?<br>
 IIFE<br>
 IIFE的使用注意：<br>
 函数的值不能直接替代函数名，会导致错误。
@@ -306,8 +285,8 @@ IIFE的使用注意：<br>
  var test = outPutNumbers(3);      
 ```
 
-### 2.0.6 垃圾回收<br>
-2.0.7.1 如果一个对象没有被引用，它就是垃圾<br>
+##### 垃圾回收<br>
+如果一个对象没有被引用，它就是垃圾<br>
 ``` 
 var a = { name:'a'};
 var b = {name:'b'};
