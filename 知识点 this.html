@@ -28,32 +28,18 @@
         console.log(this)
         }
         f.call() // window 
+        f()// window
         
         //1.0.3
         function f(){
         'use strict'
         console.log(this)
         }
-        f.call() // undefined 
-        
-        //1.0.4
-        function f1() {
-        console.log(" without strict" + this);
-        }
-        // 返回false，因为"this"指向全局对象，"!this"就是false
-        f1();
-        
-        // 1.0.5 
-        function f2() {
-            "use strict";
-            console.log(" with strict " + this);
-        }
-        f2();
-        // 返回true，因为严格模式下，this的值为undefined，所以"!this"为true。
-        // without new 
+        f.call() // undefined
+        f() // undefined 
         
         
-        // 1.0.6
+        // 1.0.4
         function f3() {
             "use strict";
             this.a = 1;
@@ -61,7 +47,7 @@
         f3();  
         // 参考：http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html        
         
-        // 1.0.7 
+        // 1.0.5
         function func() {
             console.log("1.0 func被 window invoke" + this);
         }
