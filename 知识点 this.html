@@ -9,7 +9,7 @@
         
         // 1.0 this 的由来 
         // 如果没有this 的话，object 的method 应该被这样调用：
-        var person = {
+          var person = {
           name: 'frank',
           sayHi: function(person){
               console.log('Hi, I am' + person.name)
@@ -22,13 +22,13 @@
           }
       }
   
-       person.sayHi(person) 
-       person.sayBye(person)
-       person.say(person, 'How are you') 
+         person.sayHi(person) 
+         person.sayBye(person)
+         person.say(person, 'How are you') 
         
         
        //如果使用了this，object 的method 应该被这样调用：
-         var person = {
+          var person = {
           name: 'frank',
           sayHi: function(){
               console.log('Hi, I am' + this.name)
@@ -41,13 +41,13 @@
           }
       }
          
-       person.sayHi.call(person) // 调用sayHi  who调用sayHi 肯定是对象呀  或者说 以person 为this 调用sayHi
-       person.sayBye.call(person)
-       person.say.call(person, 'How are you') 
+          person.sayHi.call(person) // 调用sayHi  who调用sayHi 肯定是对象呀  或者说 以person 为this 调用sayHi
+          person.sayBye.call(person)
+          person.say.call(person, 'How are you') 
        
-       person.sayHi()
-       person.sayBye()
-       person.say('How are you') 
+          person.sayHi()
+          person.sayBye()
+          person.say('How are you') 
         
         
         
@@ -65,17 +65,38 @@
           }
       }
          
-      // 说明函数是独立存在的 函数只和call 的第一个参数 this = object 有关 
+      // 说明object里面的method 是独立存在的(由内存图可知) 函数只和call 的第一个参数 this = object 有关 
       // 隐式和显示绑定
-      var window.name = "name in gobal "
+      var name = "name in gobal "
       var fn = person.sayHi
       fn();// 隐式绑定 
       fn.call(window); //显示绑定
       person.sayHi.call({name:"yyy"})  
       
+      // 2.0.1 又一个例子说明object里面的method 是独立存在的
+      var fatherOfTree = {
+      name:"AppleTree",
+      son:{
+      name:"sonOfAppleTree",
+      sayName:function(){
+      console.log(this.name)
+      }
+      }
+      }
       
+      var name = "name in global"
+      fatherOfTree.son.sayName()// 隐式绑定  sonOfAppleTree 
+      fatherOfTree.son.sayName.call()// call的第一参数没有任何参数填写，默认window  name in global 
+      fatherOfTree.son.sayName.call({name："yyy"});
 	    
-
+	    
+     //2.0.2 显示绑定 
+       var obj = {
+            method: function() {
+                console.log(this === obj)
+            }
+        }
+        obj.method.call(obj)
       
        // 3.0 strict mode when the default value is undefined
         function f(){
@@ -103,100 +124,55 @@
         console.log(this)
         }
         f.call() // undefined
-        f() // undefined 
-              
-        // 4.0
-        // 参考 https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/objects-classes/ch2.md
-        var obj = {
-            method: function() {
-                console.log(this === obj)
-            }
-        }
-        obj.method.call(obj)
-        
-        
-        // 5.0  shadowing  this   or   Implicit Binding and lost  
-         
-        // 5.0.1  what happens if we attach is to the object dynamically  
-        var obj = {
-            name: 'Jane',
-            friends: ['Tarzan', 'Cheeta'],
-            loop: function() {
-                'use strict';
-                this.friends.forEach(
-                    function(friend) {
-                        console.log(this.name + ' knows ' + friend);
-                    }
-                );
-            }
-        };
-        // obj.loop(); 
-        // TypeError: Cannot read property 'name' of undefined
-     
-        
-        
-        var obj = {
-            name: 'hello world ',
-            friends: ['test hello world']
-        }
-        obj.loop = function() {
-                this.friends.forEach(
-                    function(friend) {
-                        console.log(this === window);
-                    });
-        }
-        obj.loop();
-        
-        
-        
-        Day = {
-            whatDay: "monday",
-            test: function(thing) {
-                console.log(this + " is " + thing);
-            }
-        };
+        f() // undefined
+	    
+       
+	    
+       //4.0 call apply bind 的差别 
+       // call apply diff 当不确定参数有多少个时候,使用apply 
 
-        Day.test.call(Day, "sunnyDay")   
-        
-        
-        
-        // 5.0.2
-        function callIt(func) {
-            func();
-        }
-        var Counter = {
-            count: 0,
-            inc: function() {
-                this.count++;
+       function sum() {
+       var n = 0;
+       for (var i = 0; i < arguments.length; i++) {
+                n += arguments[i]
             }
+       return n
         }
-        //callIt(Counter.inc)();
-        // didnot work out Because the this in counter inc  is set to window object        
-           
-        // 5.0.3
-        // obj.foo 相当于是被 window 这个object call  所以是隐式绑定 
-        function foo() {
-          console.log(this.a);
-        }
+      var a = [1, 2, 3, 4, 5, 6, 7, 8]
+      sum.apply(undefined, a)
+	
+	    
+       // 5.0 bind 
+       /*
+      However, instead of calling the function immediately, bind returns a new function. 
+      This new function has the this value and the parameters already set and bound. 
+      When it’s invoked, it’ll be invoked with those items already in place.  
+     */
+      function logThisAndArguments(arg1, arg2) {
+      console.log(this);
+      console.log(arg1);
+      console.log(arg2);
+}
 
-        function doFoo(fn) {
-           
-            fn(); 
-        }
-        
-        var obj = {
-            a: 2,
-            foo: foo
-        };
-        
-        var a = "oops, global"; 
-        doFoo( obj.foo ); //oops, global
-                
-        
+      const obj = { val: 'Hello!' };
+      const fnBound = logThisAndArguments.bind(obj, 'First arg', 'Second arg');
 
-        
+      console.log(fnBound);
+      // -> [Function: bound logThisAndArguments]
+
+      fnBound();
+      // -> { val: 'Hello!' }
+      // -> First arg
+      // -> Second arg
+
+
       
-        
+	    
+	    
+	    
+	    
+	    
+	    
      </script>
 </body>
 
