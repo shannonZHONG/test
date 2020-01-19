@@ -66,12 +66,18 @@
       }
          
       // 说明函数是独立存在的 函数只和call 的第一个参数 this = object 有关 
+      // 隐式和显示绑定
       var window.name = "name in gobal "
       var fn = person.sayHi
-      fn.call(window); 
+      fn();// 隐式绑定 
+      fn.call(window); //显示绑定
       person.sayHi.call({name:"yyy"})  
       
-       // 3.0 with or without strict mode when the default value is winodw or undefined
+      
+	    
+
+      
+       // 3.0 strict mode when the default value is undefined
         function f(){
         'use strict'
         console.log(this)
