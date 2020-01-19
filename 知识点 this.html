@@ -3,14 +3,14 @@
 
 <body>
     <div> this overview </div>
-    <ul>
-        <li></li>
-        <li>/li>
-        <li>3.0.1 why we need this ?</li>
-        <li> 3.0.2 how to apply this? </li>      
+    <ul>  
     </ul>
     <script>
-        // 1.0.0 with or without strict mode when the default value is winodw or undefined  
+        
+        
+        // 1.0 with or without strict mode when the default value is winodw or undefined
+        
+        
         function f(){
         'use strict'
         console.log(this)
@@ -39,9 +39,9 @@
         f() // undefined 
               
         
-        // 2.0 Explicit Binding: funciton with call(),apply() and bind()
+        // 2.0 
         
-        // 2.0.1 call method 的第一个参数 是什么？
+        // 2.0.1 
         // 参考 https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/objects-classes/ch2.md
         var obj = {
             method: function() {
@@ -49,6 +49,10 @@
             }
         }
         obj.method.call(obj);
+        
+
+
+
         
         
         
