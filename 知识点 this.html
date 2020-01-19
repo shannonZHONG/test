@@ -7,30 +7,91 @@
     </ul>
     <script>
         
+        // 1.0 this 的由来 
+        // 如果没有this 的话，object 的method 应该被这样调用：
+        var person = {
+          name: 'frank',
+          sayHi: function(person){
+              console.log('Hi, I am' + person.name)
+          },
+          sayBye: function(person){
+              console.log('Bye, I am' + person.name)
+          },
+          say: function(person, word){
+              console.log(word + ', I am' + person.name)
+          }
+      }
+  
+       person.sayHi(person) 
+       person.sayBye(person)
+       person.say(person, 'How are you') 
         
-        // 1.0 with or without strict mode when the default value is winodw or undefined
+        
+       //如果使用了this，object 的method 应该被这样调用：
+         var person = {
+          name: 'frank',
+          sayHi: function(){
+              console.log('Hi, I am' + this.name)
+          },
+          sayBye: function(){
+              console.log('Bye, I am' + this.name)
+          },
+          say: function(word){
+              console.log(word + ', I am' + this.name)
+          }
+      }
+         
+       person.sayHi.call(person) // 调用sayHi  who调用sayHi 肯定是对象呀  或者说 以person 为this 调用sayHi
+       person.sayBye.call(person)
+       person.say.call(person, 'How are you') 
+       
+       person.sayHi()
+       person.sayBye()
+       person.say('How are you') 
         
         
+        
+        // 2.0 object 里面的method 是独立存在的吗？ 
+         var person = {
+          name: 'frank',
+          sayHi: function(){
+              console.log('Hi, I am' + this.name)
+          },
+          sayBye: function(){
+              console.log('Bye, I am' + this.name)
+          },
+          say: function(word){
+              console.log(word + ', I am' + this.name)
+          }
+      }
+         
+      // 说明函数是独立存在的 函数只和call 的第一个参数 this = object 有关 
+      var window.name = "name in gobal "
+      var fn = person.sayHi
+      fn.call(window); 
+      person.sayHi.call({name:"yyy"})  
+      
+       // 3.0 with or without strict mode when the default value is winodw or undefined
         function f(){
         'use strict'
         console.log(this)
         }
         f.call(1) // 数字1 
         
-        // 1.0.1
+        // 3.0.1
         function f(){
         console.log(this)
         }
         f.call(1) // 对象1 
         
-        //1.0.2
+        //3.0.2
         function f(){
         console.log(this)
         }
         f.call() // window 
         f()// window
         
-        //1.0.3
+        //3.0.3
         function f(){
         'use strict'
         console.log(this)
@@ -38,64 +99,16 @@
         f.call() // undefined
         f() // undefined 
               
-        
-        // 2.0 
-        
-        // 2.0.1 
+        // 4.0
         // 参考 https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/objects-classes/ch2.md
         var obj = {
             method: function() {
                 console.log(this === obj)
             }
         }
-        obj.method.call(obj);
-        
-
-
-
+        obj.method.call(obj)
         
         
-        
-        
-       
-        
-
-        
-        
-  
-  
-        
-        
-       
-       
-        
-
-        
-
-
-    
-        
-   
-        
-        
-      
-        
-        
-        
-       
-        
-          
-                
-        
-        
-        
-        
-        
-
-      
-
-    
-
         // 5.0  shadowing  this   or   Implicit Binding and lost  
          
         // 5.0.1  what happens if we attach is to the object dynamically  
