@@ -104,7 +104,7 @@ console.log(book.author);// undefined
             obj.name = "test";
         }
         var person = new Object();
-        setName(person); // obj 和person 引用的是引用的是同一个对象  或者是 它们在stack 的地址都指向heap 里面的同一个东东  而这个东东就是全军对象 
+        setName(person); // obj 和person 引用的是引用的是同一个对象  或者是 它们在stack 的地址都指向heap 里面的同一个东东  而这个东东就是全局对象 
         console.log(person.name); // "test"            
         
         ```
