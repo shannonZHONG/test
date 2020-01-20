@@ -50,9 +50,6 @@ console.log(book.author);// undefined
 
 ### 4.0.1.2  例题 <br>
 
-
-#### 4.0.1.2.1  value 等于 reference value 时 <br>
-
       ```       
       var i = 0; // primitive value 
       var j = 0;
@@ -73,9 +70,7 @@ console.log(book.author);// undefined
 
         
         
-#### 4.0.1.2.2 传递的参数是reference value 时  <br>
-这个参数会被改变<br>
-参数的值 只能按照值来传递<br>
+
 
         ```         
         var i = 0;
@@ -114,7 +109,7 @@ console.log(book.author);// undefined
         
         ```
         
-   #### 4.0.1.2.2  value 等于 reference value 时  <br>   
+  
     
         ```
          var a = {
@@ -175,5 +170,5 @@ console.log(book.author);// undefined
        
       ```
 
-## 4.0.2 what is reference value and how to apply to it?<br>
+
 
