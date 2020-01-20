@@ -12,14 +12,14 @@ null undefined;<br>
 所有的object 都是 true;<br>
 
 
-## 4.0.1 why and what does the value to store in stack and heap?  <br>
+## 1.0 数据存在stack 和 heap 的差别  <br>
 primitive value 存储在memory 的stack 里面；存在stack的值是固定的<br>
 reference value 存储在memory 的heap 里面 但reference value 本身存在stack里面；<br>
 由于object 的大小常常会改变 改变的时候只要在heap 中allocate 一块新的记忆空间 然后让stack 中的引用指向它就好了<br>
 primitive value：undefined null number  string boolean<br>
 reference value: object<br>
 
-### 4.0.1.1 为什么 string 的值 是固定的？为什么可以使用slice()等 methods？<br>
+## 2.0 一个关于临时对象的例子<br>
 
 
 ```
@@ -48,63 +48,60 @@ console.log(book.author);// undefined
 ```
 
 
-### 4.0.1.2  例题 <br>
+## 3.0  例题 <br>
 
-      ```       
+      ``` 
+      函数的参数分别为 primitive value 和 reference value 时 的差别：
       var i = 0; // primitive value 
       var j = 0;
       i++;
       console.log(j);
-
-      var userA = {  // reference value 
-            name: "hello"
+      
+      
+      var i = 0;
+      var f = function(i) {
+            z = i + 1；
+            console.log(" this is z value " + " " + z)
       };
-      // stack 中有两个reference value 指向 同一块 heap 中的地址 所以更改 
-      var userB = userA; 
-      // = mean： it does not create a new object it just have an alias to the original object that is by reference
-      // in other way ： by reference mean： the objectA is in address 100 and the objectB is in address 100 too. so the objectA is referenced by ObjectB 
-      // 拷贝的只是地址
-      userA.name = "changed";
-      console.log(userB.name);
+      f(i);
+      console.log(" this is i value  " + " " + i);
+    
       ``` 
 
         
-        
-
-
-        ```         
-        var i = 0;
-        var f = function(i) {
-            i++
-        };
-        f(i);
-        console.log(i);
-
-        var user = {
-            name: "test"
-        };
-        var f = function(user) {
-            user.name = "user被复制的只是reference而不是value。因此这个时候stack 里面有两个reference 是指向同一个heap 地址的"
-        }; // 或者说 对象是引用类型 传进去的实际上是 user 的地址  
-        f(user);
-        console.log(user.name);  
-        
-        
-        
-         function setName(obj) {
+      ```         
+     
+      var userA = {  // reference value 
+            name: "hello"
+      };
+      
+      /* stack 中有两个reference value 指向 同一块 heap 中的地址 所以更改
+         it does not create a new object it just have an alias to the original object that is by reference
+         in other way ： by reference mean： the objectA is in address 100 and the objectB is in address 100 too. so the objectA is              referenced by ObjectB 
+      */
+      var userB = userA; 
+      userA.name = "changed";
+      console.log(userB.name);
+  
+  
+  
+       function setName(obj) {
             obj.name = "test";
-            obj = new Object(); // 当函数内部重写obj，这个变量引用的就是一个局部对象，而这个局部对象会在函数执行完毕之后立即撤销
+            obj = new Object(); 
+            // 当函数内部重写obj，这个变量引用的就是一个局部对象，而这个局部对象会在函数执行完毕之后立即撤销
             obj.name = "changed"
         }
         var person = new Object();
         setName(person);
         console.log(person.name); // "test"    
         
-          function setName(obj) {
+        
+        
+        function setName(obj) {
             obj.name = "test";
         }
         var person = new Object();
-        setName(person); // obj 和person 引用的是引用的是同一个对象  或者是 它们在stack 的地址都指向heap 里面的同一个东东  而这个东东就是全局对象 
+        setName(person); // obj 和person 引用的是引用的是同一个对象  或者是 它们在stack 的地址都指向heap 里面的同一个东东  而这个东东就是         全局对象 
         console.log(person.name); // "test"            
         
         ```
