@@ -161,21 +161,7 @@ f5.name;//"anonymous"
 
 ```
 
-## 3.0 没有重载 <br>
-
-```
-   function testOverLoading(num) {
-            return num + 100;
-        }
-
-        function testOverLoading(num) {
-            return num + 200;
-        }
-        var result = testOverLoading(100);
-        console.log(result);
-
-```
-函数也是变量<br>
+## 3.0 函数也是变量  <br>
 在创建第二个函数时，实际上覆盖了引用第一个函数的变量testOverLoading<br>
 
 ```
@@ -356,22 +342,7 @@ function 有属性和方法<br>
 
 
 
-
-## 7.0 如何调用函数 <br>
-
-
-
-
-
-
-
-## 8.0 什么是call stack<br> 
-
-
-
-
-
-## 9.0 什么是构造函数<br> 
+## 7.0 什么是构造函数<br> 
 返回是对象的函数，是构造函数<br>
 
 ```
@@ -383,14 +354,7 @@ function 有属性和方法<br>
         }
 ```
 
-## this and argument （可以补充到this）<br>
 
-
-
-
-
-
-## 10.0 递归<br>
 
 
 
