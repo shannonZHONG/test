@@ -201,47 +201,12 @@ f5.name;//"anonymous"
    console.log(result2);
 
 ```     
-  
-可以从一个函数当中返回一个函数。<br>
 
-```
- function createComparisonFunction(propertyName) {
-            return function(object1, object2) {
-                var value1 = object1[propertyName];
-                var value2 = object2[propertyName];
 
-                if (value1 < value2) {
-                    return -1;
-                } else if (value1 > value2) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-
-            };
-        }
-
-        var data = [{
-            name: "Zachary",
-            age: 28
-        }, {
-            name: "Nicholas",
-            age: 29
-        }];
-        var testAge = createComparisonFunction("name");
-        // incoke createComparisonFunction to create a comparison function that sorts basd on the name property
-        // createComparisonFunction 返回是一个匿名函数，返回的匿名函数会被赋值给一个变量<br> 
-        console.log(testAge);
-       
-        var test1 = data.sort(testAge);
-        console.log(test1);
-```
-sort Api 小插曲：<br>
-arr.sort([compareFunction])<br>
-Specifies a function that defines the sort order. If omitted, the array is sorted according to each character's Unicode code point value, according to the string conversion of each element. <br>
-
-## 5.0 函数内部的属性<br>
-在函数内部，有两个特殊的对象： argument 和 this<br>
+        
+        
+## 4.0 函数内部的属性<br>
+在函数内部，有两个特殊的对象： argument 和 this <br>
 argument 的主要作用：保存参数;但这个对象还有一个callee的属性;<br>
 why do arguemnts have a property called callee？<br>
 the function name is as same as the name in function . <br>
@@ -271,7 +236,7 @@ chinese: 为了消除这种紧密耦合的状况, .....<br>
                 return 1;
 
             } else {
-                return num * arguments。callee(num - 1);
+                return num * arguments.callee(num - 1);
 
             }
         }
@@ -286,7 +251,7 @@ chinese: 为了消除这种紧密耦合的状况, .....<br>
                 return 1;
 
             } else {
-                return num * arguments。callee(num - 1);
+                return num * arguments.callee(num - 1);
 
             }
         }
@@ -319,7 +284,7 @@ chinese: 为了消除这种紧密耦合的状况, .....<br>
 至于this 的取值，请看上面一句话<br>
 
 ```
-window.color = "red"; //这个就是全局变量
+window.color = "red"; 
         var o = {
             color: "blue"
         };
@@ -333,7 +298,7 @@ window.color = "red"; //这个就是全局变量
 
 ```
 
-## 6.0 函数属性和方法<br>
+## 5.0 函数属性和方法<br>
 function 是特殊的对象，对象有什么 那么function就有什么<br>
 function 有属性和方法<br>
 属性分别是：length 和prototype; length就是参数的个数；prototype 是不可枚举的 换句话说<br> 
@@ -342,7 +307,7 @@ function 有属性和方法<br>
 
 
 
-## 7.0 什么是构造函数<br> 
+## 6.0 什么是构造函数<br> 
 返回是对象的函数，是构造函数<br>
 
 ```
