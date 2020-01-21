@@ -178,7 +178,7 @@ f5.name;//"anonymous"
 ```
 
 
-## 4.0 函数不仅是函数，还是一个变量<br>
+### 3.0.1 更多的例子<br>
 具体应用：函数是一个变量，变量也可以是一个参数，那么函数也可以被当成参数一样传递<br>
         变量可以被当成函数的结果传回来，那么一个函数也可以被当成另外一个函数的结果传回来<br>
 注意：变量 add10 和 getGreeting 以参数的形式传入函数  callSomeFunction 中，而不是把 add10 和 getGreeting 函数（变量）return 的结果 传入 函数 callSomeFunction <br>       
