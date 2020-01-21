@@ -131,13 +131,6 @@ console.log(sum(1,2));
         console.log(anotherSum(10, 10));
 
 ```
-1.0.5方法五：箭头函数<br>
-
-```
-
-
-
-```
 
 
 ## 2.0 property name 
